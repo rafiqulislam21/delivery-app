@@ -1,9 +1,8 @@
-import 'package:delivery_app/pages/signin.dart';
 import 'package:delivery_app/widgets/custom_button.dart';
 import 'package:delivery_app/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 
-class Signup extends StatelessWidget {
+class OrderForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +15,7 @@ class Signup extends StatelessWidget {
       body: Container(
         child: Padding(
           padding:
-              const EdgeInsets.only(top: 0, left: 20, bottom: 10, right: 20),
+          const EdgeInsets.only(top: 0, left: 20, bottom: 10, right: 20),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -25,7 +24,7 @@ class Signup extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Signup',
+                      'Informations',
                       style: TextStyle(
                           fontSize: 50,
                           color: Theme.of(context).accentColor,
@@ -58,12 +57,13 @@ class Signup extends StatelessWidget {
                   height: 30,
                 ),
                 CustomTextfield(
-                  hintText: 'Password',
-                  isPassword: true,
+                  hintText: 'Address',
+                  isPassword: false,
                 ),
                 SizedBox(
                   height: 30,
                 ),
+
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -74,42 +74,16 @@ class Signup extends StatelessWidget {
 //                                MaterialPageRoute(builder: (context) => Dashboard()),
 //                              );
                         },
-                        buttonText: "Sign Up",
+                        buttonText: "Place Order",
                         color: Theme.of(context).primaryColor,
                         textColor: Theme.of(context).accentColor,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "Already Have an Account?",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Theme.of(context).accentColor,
-                      ),
-                    ),
-                    InkWell(
-                        child: Text(
-                          " Sign In",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Signin()),
-                          );
-                        }),
-                  ],
-                ),
+
+
+
               ],
             ),
           ),
