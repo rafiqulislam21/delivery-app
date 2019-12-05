@@ -27,7 +27,7 @@ class Signup extends StatelessWidget {
                     Text(
                       'Signup',
                       style: TextStyle(
-                          fontSize: 50,
+                          fontSize: 35,
                           color: Theme.of(context).accentColor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -90,7 +90,6 @@ class Signup extends StatelessWidget {
                     Text(
                       "Already Have an Account?",
                       style: TextStyle(
-                        fontSize: 18,
                         color: Theme.of(context).accentColor,
                       ),
                     ),
@@ -98,8 +97,8 @@ class Signup extends StatelessWidget {
                         child: Text(
                           " Sign In",
                           style: TextStyle(
-                            fontSize: 18,
                             color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold
                           ),
                         ),
                         onTap: () {

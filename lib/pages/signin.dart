@@ -30,7 +30,7 @@ class Signin extends StatelessWidget {
                     Text(
                       'Login',
                       style: TextStyle(
-                          fontSize: 50,
+                          fontSize: 35,
                           color: Theme.of(context).accentColor,
                           fontWeight: FontWeight.bold),
                     ),
@@ -80,7 +80,6 @@ class Signin extends StatelessWidget {
                     Text(
                       'Login with',
                       style: TextStyle(
-                        fontSize: 18,
                         color: Theme.of(context).accentColor,
                       ),
                     ),
@@ -130,7 +129,6 @@ class Signin extends StatelessWidget {
                     Text(
                       "Haven't Account?",
                       style: TextStyle(
-                        fontSize: 18,
                         color: Theme.of(context).accentColor,
                       ),
                     ),
@@ -138,8 +136,8 @@ class Signin extends StatelessWidget {
                         child: Text(
                           " Sign Up",
                           style: TextStyle(
-                            fontSize: 18,
                             color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold
                           ),
                         ),
                         onTap: () {

@@ -19,7 +19,7 @@ class CustomTextfield extends StatelessWidget {
         controller: controller,
         obscureText: isPassword,
         decoration: InputDecoration(
-          hintStyle: TextStyle(fontSize: 17),
+          hintStyle: TextStyle(fontSize: 14),
           hintText: hintText,
           border: InputBorder.none,
           contentPadding: EdgeInsets.all(20),

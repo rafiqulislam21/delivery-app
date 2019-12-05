@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Text(
                               'Delivery App is Flat, minimal product delivery app with lots of cool features',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 14,
                                 color: Colors.black54,
                                 letterSpacing: 1,
                               ),

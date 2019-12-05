@@ -1,5 +1,4 @@
 import 'package:delivery_app/pages/orders.dart';
-import 'package:delivery_app/pages/products.dart';
 import 'package:delivery_app/widgets/clipper.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Products(),
+      body: Orders(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -55,7 +54,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 40),
+                          horizontal: 20, vertical: 20),
                       child: Padding(
                         padding: const EdgeInsets.only(top: 100.0),
                         child: Column(
@@ -75,7 +74,7 @@ class _DashboardState extends State<Dashboard> {
                                   Text(
                                     'Home',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).accentColor,
                                     ),
@@ -100,9 +99,9 @@ class _DashboardState extends State<Dashboard> {
                                     width: 10,
                                   ),
                                   Text(
-                                    'My Orders',
+                                    'Orders',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).accentColor,
                                     ),
@@ -110,11 +109,7 @@ class _DashboardState extends State<Dashboard> {
                                 ],
                               ),
                               onTap: () {
-                                Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Orders()),
-                              );
-//                                Navigator.pop(context);
+                                Navigator.pop(context);
                               },
                             ),
                             ListTile(
@@ -130,7 +125,7 @@ class _DashboardState extends State<Dashboard> {
                                   Text(
                                     'Notifications',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).accentColor,
                                     ),
@@ -157,7 +152,7 @@ class _DashboardState extends State<Dashboard> {
                                   Text(
                                     'Settings',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).accentColor,
                                     ),
@@ -184,7 +179,7 @@ class _DashboardState extends State<Dashboard> {
                                   Text(
                                     'Logout',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).accentColor,
                                     ),

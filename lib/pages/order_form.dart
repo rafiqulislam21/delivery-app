@@ -5,35 +5,29 @@ import 'package:flutter/material.dart';
 class OrderForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFE3E3E3),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        bottomOpacity: 0.0,
-        elevation: 0.0,
-      ),
-      body: Container(
-        child: Padding(
-          padding:
-          const EdgeInsets.only(top: 0, left: 20, bottom: 10, right: 20),
-          child: SingleChildScrollView(
+    return Container(
+      color: Color(0xFFE3E3E3),
+        child: SingleChildScrollView(
+
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Informations',
-                      style: TextStyle(
-                          fontSize: 50,
-                          color: Theme.of(context).accentColor,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                Center(
+                  child: Text(
+                    'Order Details',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Theme.of(context).accentColor,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
+
                 SizedBox(
-                  height: 100,
+                  height: 10,
                 ),
                 CustomTextfield(
                   hintText: 'Name',
@@ -57,7 +51,14 @@ class OrderForm extends StatelessWidget {
                   height: 30,
                 ),
                 CustomTextfield(
-                  hintText: 'Address',
+                  hintText: 'From (Address)',
+                  isPassword: false,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                CustomTextfield(
+                  hintText: 'To (Address)',
                   isPassword: false,
                 ),
                 SizedBox(
@@ -66,6 +67,17 @@ class OrderForm extends StatelessWidget {
 
                 Row(
                   children: <Widget>[
+                    Expanded(
+                      child: CustomButton(
+                        onPressed: () {
+                             Navigator.of(context).pop();
+                        },
+                        buttonText: "Close",
+                        color: Theme.of(context).accentColor,
+                        textColor: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 10,),
                     Expanded(
                       child: CustomButton(
                         onPressed: () {
@@ -88,7 +100,7 @@ class OrderForm extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
